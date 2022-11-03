@@ -39,7 +39,9 @@ void prepend(List* &list, string val){
 //This function removes the first item from the list
 void removeFirst(List* &list){
     //❓ Lab Question 9
-    //YOUR CODE HERE
+     List* turnip = list;
+    list = list->next;
+    delete turnip;
 }
 
 //This function returns true if the list haystck
@@ -76,7 +78,7 @@ void main(){
 
     //❓ Lab Question 6
      // YOUR CODE TO REMOVE TURNIPS HERE:
-      dinner = dinner->next;
+      removeFirst(dinner);
     printList(dinner);
 
     //❓ Lab Question 10
